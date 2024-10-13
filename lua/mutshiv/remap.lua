@@ -1,11 +1,21 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Current Browsong dir" })
 
-vim.keymap.set("v", "K", ":m '<-2<CR>", { desc = "Move Line 1 Down" })
-vim.keymap.set("v", "J", ":m '>+1<CR>", { desc = "Move Line 1 Up" })
+local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "<C-j>", ":m '.+1<CR>", { desc = "Move Line 1 Up" })
-vim.keymap.set("n", "<C-k>", ":m '.-2<CR>", { desc = "Move Line 1 Down" })
+-- Normal mode mapping
+keymap('n', '<C-j>', ':m .+1<CR>', opts)
+keymap('n', '<C-k>', ':m .-2<CR>', opts)
+
+-- Visual mode mapping
+keymap('v', '<C-j>', ":m '>+1<CR>", opts)
+keymap('v', '<C-k>', ":m '<-2<CR>", opts)
+
+--vim.keymap.set("v", "K", ":m '<-2<CR>", { desc = "Move Line 1 Down" })
+--vim.keymap.set("v", "J", ":m '>+1<CR>", { desc = "Move Line 1 Up" })
+
+--vim.keymap.set("n", "<C-j>", ":m '.+1<CR>", { desc = "Move Line 1 Up" })
+--vim.keymap.set("n", "<C-k>", ":m '.-2<CR>", { desc = "Move Line 1 Down" })
 
 -- vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down" })
