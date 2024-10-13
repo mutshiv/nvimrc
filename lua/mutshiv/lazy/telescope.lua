@@ -24,5 +24,12 @@ return {
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end, { desc = "[S]earch Grep" })
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {desc = "Help"})
+
+        -- Git information
+        vim.keymap.set('n', '<leader>g', "<nop>", {desc = "Git"})
+        vim.keymap.set('n', '<leader>gs', builtin.git_status, {desc = "Status"})
+        vim.keymap.set('n', '<leader>gc', builtin.git_commits, {desc = "Commits"})
+        vim.keymap.set('n', '<leader>gb', builtin.git_branches, {desc = "Branches"})
+        vim.keymap.set('n', '<leader>gt', builtin.git_stash, {desc = "Stash List"})
     end
 }

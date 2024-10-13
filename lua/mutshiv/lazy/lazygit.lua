@@ -15,6 +15,6 @@ return {
 
 	keys = {
 		{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit"},
-		{ "<leader>l", "<nop>", desc = "Git..."}
+		{ "<leader>l", "<nop>", desc = "Lazy Git..."}
 	}
 }
