@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Current Browsing dir" })
 
+-- Java keymaps
+vim.keymap.set('n', '<leader>c', "<cmd>lua require('jdtls').organize_imports()<cr>", {desc = 'Code'})
+
 local opts = { noremap = true, silent = true }
 
 -- Normal mode mapping
