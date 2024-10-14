@@ -23,7 +23,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank..." })
 
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete..." })
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Document..." })
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -48,5 +48,6 @@ vim.keymap.set("n", "<leader>s", "<nop>", { desc = "[S]earch..." })
 vim.keymap.set("n", "<leader>v", "<nop>", { desc = "Vim Help..." })
 vim.keymap.set("n", "<leader>p", "<nop>", { desc = "Project..." })
 vim.keymap.set("n", "<leader>g", "<nop>", { desc = "Git..." })
+vim.keymap.set("n", "<leader>c", "<nop>", { desc = "Code..." })
 vim.keymap.set("n", "<leader>t", "<nop>", { desc = "Trouble..." })
 vim.keymap.set("n", "<leader>j", "<nop>", { desc = "TODO Comments..." })
