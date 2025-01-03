@@ -1,9 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Current Browsing dir" })
 
--- Java keymaps
--- vim.keymap.set('n', '<leader>c', "<cmd>lua require('jdtls').organize_imports()<cr>", {desc = 'Code'})
-
 local opts = { noremap = true, silent = true }
 
 -- Normal mode mapping
@@ -20,12 +17,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll Up" })
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank..." })
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Document..." })
 
--- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- save current file
