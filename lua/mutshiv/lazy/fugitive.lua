@@ -6,6 +6,7 @@ return {
             vim.cmd.Git('push')
         end, {desc = 'Git Push'})
 
-        vim.keymap.set("n", "<leader>ga", "<cmd>Gwrite <CR>", {desc = 'Git Add'})
+        vim.keymap.set("n", "<leader>ga", "<cmd>G <CR>", {desc = 'Git Add'})
+        vim.keymap.set("n", "<leader>gcc", "<cmd>Git commit <CR>", {desc = 'Git Add'})
     end,
 }
