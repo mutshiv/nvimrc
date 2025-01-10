@@ -36,14 +36,14 @@ return {
                     -- Actions
                     map({ 'n', 'v' }, '<leader>hs', ':Gitsigns stage_hunk<CR>')
                     map({ 'n', 'v' }, '<leader>hr', ':Gitsigns reset_hunk<CR>')
-                    map('n', '<leader>hS', gs.stage_buffer)
-                    map('n', '<leader>hu', gs.undo_stage_hunk)
-                    map('n', '<leader>hR', gs.reset_buffer)
-                    map('n', '<leader>hp', gs.preview_hunk)
-                    map('n', '<leader>hb', function() gs.blame_line { full = true } end)
+                    map('n', '<leader>hS', gs.stage_buffer, {desc = 'Stage Buffer'})
+                    map('n', '<leader>hu', gs.undo_stage_hunk, {desc = 'Undo Stage Hunk'})
+                    map('n', '<leader>hR', gs.reset_buffer, {desc = 'Reset Buffer'})
+                    map('n', '<leader>hp', gs.preview_hunk, {desc = 'Preview Hunk'})
+                    map('n', '<leader>hb', function() gs.blame_line { full = true } end, {desc = 'Git Blame Float'})
                     map('n', '<leader>tb', gs.toggle_current_line_blame, {desc = 'Git Line Blame'})
                     map('n', '<leader>hd', gs.diffthis, {desc = 'Git Diff'})
-                    map('n', '<leader>hD', function() gs.diffthis('~') end)
+                    map('n', '<leader>hD', function() gs.diffthis('~') end, {desc = 'File Diff'})
                     map('n', '<leader>td', gs.toggle_deleted, {desc = 'Git Show Deleted'})
 
                     -- Text object
